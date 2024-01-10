@@ -1,14 +1,12 @@
 import { useState } from 'react'
 
-function useInput() {
+export const useInput = () => {
 
     const [value, setValue] = useState("")
 
-    const HandlerInput = (e) => {
+    const handlerInput = (e) => {
         setValue(e.target.value)
     }
 
-    return [value, HandlerInput]
+    return [value, handlerInput]
 }
-
-export default useInput
